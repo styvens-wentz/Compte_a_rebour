@@ -1,12 +1,14 @@
+const aff_jours = document.getElementsByClassName('resul_jours');
+const aff_heures = document.getElementsByClassName('resul_heures');
+const aff_minutes = document.getElementsByClassName('resul_minutes');
+const aff_secondes = document.getElementsByClassName('resul_secondes');
+
+
 const compte_a_rebours = function () {
     setTimeout(compte_a_rebours, 1000);
     const date_actuelle = new Date();
     let annee_actuelle = 2020;
     const date_nouvelle_an = new Date(annee_actuelle, 0, 1, 0, 0, 0, 0);
-    const aff_jours = document.getElementsByClassName('resul_jours');
-    const aff_heures = document.getElementsByClassName('resul_heures');
-    const aff_minutes = document.getElementsByClassName('resul_minutes');
-    const aff_secondes = document.getElementsByClassName('resul_secondes');
     if ((date_nouvelle_an - date_actuelle) / 1000 < 0) {
         annee_actuelle++;
         date_nouvelle_an.setFullYear(annee_actuelle);
@@ -31,6 +33,8 @@ const compte_a_rebours = function () {
             seconde.innerHTML = secondes
         }
     }
+
+
     afficher_compteur();
 };
 
