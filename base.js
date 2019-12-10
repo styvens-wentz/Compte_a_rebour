@@ -3,7 +3,6 @@ const compte_a_rebours = function () {
     const date_actuelle = new Date();
     let annee_actuelle = 2020;
     const date_nouvelle_an = new Date(annee_actuelle, 0, 1, 0, 0, 0, 0);
-    const compteur_nouvelleAns = document.getElementById('compteur_nouvelleAns');
     const aff_jours = document.getElementsByClassName('resul_jours');
     const aff_heures = document.getElementsByClassName('resul_heures');
     const aff_minutes = document.getElementsByClassName('resul_minutes');
